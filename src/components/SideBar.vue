@@ -9,10 +9,10 @@ const linkText = (text: string) => {
 
 <template>
   <div
-    class="w-full bg-black md:bg-none min-h-screen fixed top-0 bottom-0 z-50 bg-opacity-20 md:z-30 md:bg-opacity-0 md:w-[240px]"
+    class="w-full bg-black md:bg-none min-h-screen fixed top-0 bottom-0 md:static z-50 bg-opacity-20 md:z-30 md:bg-opacity-0 md:w-[240px]"
   >
     <aside
-      class="min-h-screen w-full max-w-[240px] fixed top-0 bottom-0 sidebar lg:block"
+      class="sidebar fixed left-0 top-0 bottom-0 lg:block md:realtive"
     >
       <div
         class="w-full bg-[#79242F] max-w-[200px] my-4 mx-4 rounded-[6px] py-[13px] px-[11px] user-details flex items-center gap-x-2"
@@ -23,7 +23,7 @@ const linkText = (text: string) => {
           <p class="text-[10px]">sammyfish007@gmail.com</p>
         </div>
       </div>
-      <main class="px-6 mt-8 h-[690px] overflow-y-scroll">
+      <div class="px-6 h-[88%] py-4 overflow-y-scroll">
         <ul>
           <li
             :key="index"
@@ -81,9 +81,11 @@ const linkText = (text: string) => {
             </div>
           </li>
         </ul>
-      </main>
+      </div>
     </aside>
   </div>
+
+  
 </template>
 
 <style scoped>

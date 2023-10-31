@@ -10,14 +10,14 @@ import { Icon } from '@iconify/vue'
 </script>
 
 <template>
-  <div class="flex relative min-h-screen">
+  <div class="relative md:flex h-screen overflow-hidden">
     <SideBar
       @click.self="show = !show"
-      :class="[show ? 'block transition-all duration-100 ease-out open' : 'hidden']"
+      :class="[show ? 'open' : 'hidden']"
       class="xl:block"
     />
 
-    <div class="w-full max-w-full">
+    <div class="flex-1  h-screen overflow-y-auto">
       <div>
         <header
           class="px-4 py-6 md:py-[24px] md:px-[50px] sticky-nav bg-white fixed top-0 left-0 w-full"
@@ -45,7 +45,7 @@ import { Icon } from '@iconify/vue'
           </div>
         </header>
       </div>
-      <div class="px-4 md:px-12 mt-24 md:mt-24 lg:mt-10 pb-4 min-h-screen main-content">
+      <div class="flex-1 px-4 mt-24 min-h-screen overflow-y-auto">
         <slot></slot>
       </div>
     </div>
